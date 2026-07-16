@@ -30,3 +30,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignorar todos los archivos ZIP
+*.zip
+
+# Ignorar todas las imágenes JPG y JPEG
+*.jpg
+*.jpeg
+
+#Ignorar documentos
+*.pdf
