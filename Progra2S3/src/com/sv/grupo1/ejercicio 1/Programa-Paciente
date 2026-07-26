@@ -1,0 +1,37 @@
+public class Paciente {
+
+    private String nombre;
+    private int edad;
+    private double peso;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void mostrarFicha() {
+        System.out.println("\n===== FICHA DEL PACIENTE =====");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Peso: " + peso + " kg");
+    }
+}
