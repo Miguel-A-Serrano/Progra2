@@ -1,12 +1,10 @@
 package com.sv.grupo1.ejercicio7;
-import com.sv.grupo1.ejercicio8.ClienteGimnasio;
-import com.sv.grupo1.ejercicio9.Facturacion;
 import java.util.ArrayList;
 
-public class Controlador {
-    static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
 
-        System.out.println("--- EJERCICIO 7 ---");
+        System.out.println("\n- - - Ejercicio 7 - - -");
 
         Platillo mesa1 = new Platillo("Pasta", 6.75);
         Platillo mesa2 = new Platillo("Pupusas", 1.50);
@@ -25,19 +23,12 @@ public class Controlador {
         lista1.add(mesa3);
         lista1.add(mesa4);
 
-        Pedido pedido1 = new Pedido(lista1);
-        pedido1.calcularTotal();
+        System.out.println();
 
-        System.out.println("--- EJERCICIO 8 ---");
+        Pedido pedido = new Pedido(lista1);
 
-        ClienteGimnasio p1 = new ClienteGimnasio("Javier Gonzalez");
-        p1.registrarEntrada();
-        p1.registrarEntrada();
-        p1.registrarEntrada();
+        pedido.calcularTotal();
 
-        System.out.println("--- EJERCICIO 9 ---");
 
-        Facturacion bill = new Facturacion('T');
-        bill.TipoPago(pedido1);
     }
 }

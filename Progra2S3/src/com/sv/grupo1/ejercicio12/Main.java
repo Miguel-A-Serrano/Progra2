@@ -3,6 +3,9 @@ package com.sv.grupo1.ejercicio12;
 public class Main {
     public static void main(String[] args) {
         CuentaCorriente miCuenta = new CuentaCorriente();
+
+        System.out.println("\n- - - Ejercicio 12 - - -");
+
         imprimirEncabezado();
         imprimirFila("Inicializa saldo", "0.0", "0");
 

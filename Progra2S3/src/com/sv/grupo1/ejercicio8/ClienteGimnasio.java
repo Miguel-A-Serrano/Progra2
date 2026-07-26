@@ -8,13 +8,13 @@ public class ClienteGimnasio {
         this.nombre = nombre;
     }
 
-    // Getters and setters //
     public String getNombre(){
         return nombre;
     }
     public void setNombre(){
         this.nombre = nombre;
     }
+
     public void registrarEntrada(){
         this.asistencia ++;
         System.out.println(nombre + ", bienvenido al GYM HERCULES.");
