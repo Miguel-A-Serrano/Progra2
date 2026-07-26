@@ -5,17 +5,17 @@ public class Main {
 
         System.out.println("\n- - - Ejercicio 6 - - -");
 
-        Biblioteca biblioteca = new Biblioteca();
-        biblioteca.agregarLibro(new Libro("Cien años de soledad", "Gabriel Garcia Marquez"));
-        biblioteca.agregarLibro(new Libro("El principito", "Antoine de Saint-Exupery"));
-        biblioteca.agregarLibro(new Libro("Don Quijote de la Mancha", "Miguel de Cervantes"));
+        ControlBiblioteca control = new ControlBiblioteca();
+        control.agregarLibro(new Libro("Cien años de soledad", "Gabriel García Márquez"));
+        control.agregarLibro(new Libro("El principito", "Antoine de Saint-Exupéry"));
+        control.agregarLibro(new Libro("Don Quijote de la Mancha", "Miguel de Cervantes"));
 
-        System.out.println("Libros de la biblioteca:");
-        biblioteca.listarLibros();
+        control.listarLibros();
 
-        Libro encontrado = biblioteca.buscarPorTitulo("El principito");
+        Libro encontrado = control.buscarPorTitulo("El principito");
         if (encontrado != null) {
-            System.out.println("\nLibro encontrado: " + encontrado.getTitulo() + " // Autor: " + encontrado.getAutor());
+            System.out.print("\nLibro encontrado: ");
+            encontrado.mostrarFicha();
         } else {
             System.out.println("\nLibro no encontrado");
         }

@@ -24,4 +24,9 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    // Método de acción
+    public void mostrarFicha() {
+        System.out.println(nombre + " // Precio: $" + precio);
+    }
 }

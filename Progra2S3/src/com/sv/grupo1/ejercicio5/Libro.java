@@ -16,4 +16,17 @@ public class Libro {
     public String getAutor() {
         return autor;
     }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    // Método de acción
+    public void mostrarTitulo() {
+        System.out.println(titulo);
+    }
 }
