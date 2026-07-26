@@ -1,3 +1,5 @@
+package com.sv.grupo1.ejercicio2;
+
 public class Paciente {
 
     private String nombre;
@@ -17,7 +19,11 @@ public class Paciente {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad >= 0 && edad <= 120) {
+            this.edad = edad;
+        } else {
+            this.edad = 0;
+        }
     }
 
     public double getPeso() {
@@ -25,11 +31,15 @@ public class Paciente {
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
+        if (peso > 0) {
+            this.peso = peso;
+        } else {
+            this.peso = 0;
+        }
     }
 
     public void mostrarFicha() {
-        System.out.println("\n===== FICHA DEL PACIENTE =====");
+        System.out.println("\n--- FICHA DEL PACIANTE ---");
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad + " años");
         System.out.println("Peso: " + peso + " kg");

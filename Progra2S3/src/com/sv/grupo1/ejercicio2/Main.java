@@ -1,3 +1,5 @@
+package com.sv.grupo1.ejercicio2;
+
 import java.util.Scanner;
 
 public class Main {
@@ -5,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-
         Paciente paciente = new Paciente();
 
         System.out.print("Ingrese el nombre del paciente: ");
@@ -21,5 +22,4 @@ public class Main {
 
         entrada.close();
     }
-
 }

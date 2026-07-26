@@ -1,3 +1,5 @@
+package com.sv.grupo1.ejercicio1;
+
 public class Paciente {
 
     private String nombre;
@@ -17,13 +19,7 @@ public class Paciente {
     }
 
     public void setEdad(int edad) {
-
-        if (edad >= 0 && edad <= 120) {
-            this.edad = edad;
-        } else {
-            this.edad = 0;
-        }
-
+        this.edad = edad;
     }
 
     public double getPeso() {
@@ -40,5 +36,5 @@ public class Paciente {
         System.out.println("Edad: " + edad + " años");
         System.out.println("Peso: " + peso + " kg");
     }
-
 }
+
