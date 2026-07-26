@@ -1,6 +1,8 @@
+package com.sv.grupo1.ejercicio3;
+
 import java.util.Scanner;
 
-public class Main1 {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -14,7 +16,6 @@ public class Main1 {
         System.out.print("Ingrese el saldo inicial: $");
         cuenta.setSaldo(entrada.nextDouble());
 
-        // Se aplica una tasa de interés anual fija del 5%
         cuenta.aplicarInteresAnual(0.05);
 
         entrada.close();

@@ -1,3 +1,5 @@
+package com.sv.grupo1.ejercicio3;
+
 public class CuentaAhorros {
 
     private String numeroCuenta;
