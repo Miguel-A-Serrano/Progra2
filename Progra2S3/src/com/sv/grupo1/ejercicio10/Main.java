@@ -3,7 +3,7 @@ package com.sv.grupo1.ejercicio10;
 public class Main {
     public static void main(String[] args) {
         AsociacionComunal asociacion = new AsociacionComunal("Comunidad San José");
-
+        System.out.println("- - - Ejercicio 10 - - -");
         System.out.println();
 
         Habitante h1 = new Habitante("Carlos Mendoza", 34);
