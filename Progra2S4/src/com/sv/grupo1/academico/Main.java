@@ -1,22 +1,57 @@
 package com.sv.grupo1.academico;
 
+/**
+ * Clase principal que sirve como punto de entrada de la aplicación.
+ * Proporciona un menú interactivo en consola para gestionar los registros
+ * de los estudiantes, permitiendo al usuario realizar operaciones como visualizar,
+ * buscar, agregar y modificar información utilizando la clase {@link GestorEstudiantes}.
+ *
+ * @author Grupo 1
+ * @version 1.0
+ */
 public class Main {
 
+    /** Constante para la opción del menú principal: Mostrar el número total de registros. */
     public static final int MOSTRAR_TOTAL_REGISTROS = 1;
+
+    /** Constante para la opción del menú principal: Mostrar todos los detalles de los registros. */
     public static final int MOSTRAR_TODO = 2;
+
+    /** Constante para la opción del menú principal: Buscar un estudiante específico por su carnet. */
     public static final int BUSCAR_POR_CARNET = 3;
+
+    /** Constante para la opción del menú principal: Agregar un nuevo registro de estudiante. */
     public static final int AGREGAR = 4;
+
+    /** Constante para la opción del menú principal: Modificar un registro de estudiante existente. */
     public static final int MODIFICAR_REGISTRO = 5;
+
+    /** Constante para la opción del menú principal: Salir de la ejecución del programa. */
     public static final int SALIR = 6;
 
+    /** Constante para el submenú de modificación: Cambiar el nombre del estudiante. */
     public static final int MODIFICAR_NOMBRE = 1;
+
+    /** Constante para el submenú de modificación: Cambiar la edad del estudiante. */
     public static final int MODIFICAR_EDAD = 2;
+
+    /** Constante para el submenú de modificación: Cambiar la carrera del estudiante. */
     public static final int MODIFICAR_CARRERA = 3;
+
+    /** Constante para el submenú de modificación: Cancelar la operación y volver al menú principal. */
     public static final int CANCELAR = 4;
 
+    /**
+     * Método principal que inicia la ejecución de la aplicación.
+     * Instancia el gestor, carga un set de datos de prueba y despliega un bucle
+     * iterativo que captura la entrada del usuario a través de {@link ScannerUtils}
+     * para navegar por las distintas opciones del sistema.
+     *
+     * @param args Argumentos de la línea de comandos (no son utilizados en esta implementación).
+     */
     public static void main(String[] args) {
-        
-        //Menú
+
+        // Menú
         GestorEstudiantes listaEstudiantes = new GestorEstudiantes();
         listaEstudiantes.cargarDatosIniciales();
         while (true) {
@@ -110,10 +145,10 @@ public class Main {
                                     System.out.println("\nOpcion no valida. Intente de nuevo");
                                 }
                             }
-                            }
-                        }else {
-                            System.out.println("Error. No se ha encontrado a ningun estudiante con el carnet: " + carnetEstudiante);
                         }
+                    }else {
+                        System.out.println("Error. No se ha encontrado a ningun estudiante con el carnet: " + carnetEstudiante);
+                    }
                 }
                 case SALIR -> {
                     System.out.println("Gracias por utilizar nuestra plataforma.");
@@ -126,4 +161,3 @@ public class Main {
         }
     }
 }
-
