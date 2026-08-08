@@ -5,16 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GestorEstudiantes {
-    private List<Estudiante> listaEstudiantes = new ArrayList<>();
+    private List<Estudiante> listaEstudiantes;
 
     public GestorEstudiantes() {
-        this.listaEstudiantes = listaEstudiantes;
+        this.listaEstudiantes = new ArrayList<>();
     }
 
+    //Getter de la lista de estudiantes
     public List<Estudiante> getListaEstudiantes() {
         return listaEstudiantes;
     }
 
+    //Método para la muestra de datos
     public void cargarDatosIniciales(){
         Estudiante[] arregloInicial = new Estudiante[25];
         for (int i = 0; i < arregloInicial.length; i++) {
@@ -29,6 +31,7 @@ public class GestorEstudiantes {
         listaEstudiantes = new ArrayList<>(Arrays.asList(arregloInicial));
     }
 
+    //Métodos para validación al agregar un estudiante y muestras
     public boolean agregarEstudiante(Estudiante nuevoEstudiante) {
         for (Estudiante estudiante : listaEstudiantes) {
             if (estudiante.getCarnet() == nuevoEstudiante.getCarnet()) {
@@ -38,8 +41,6 @@ public class GestorEstudiantes {
         }
         return listaEstudiantes.add(nuevoEstudiante);
     }
-
-
 
     public void mostrarRegistros () {
         for (Estudiante estudiante : listaEstudiantes) {
@@ -56,6 +57,7 @@ public class GestorEstudiantes {
             System.out.println("No se ha encontrado ningun estudiante con el carnet: " + carnetEstudiante);
         }
 
+        //Métodos para modificación de información
     public void modificarNombre(int carnetEstudiante, String nuevoNombre) {
         for (int i = 0; i < listaEstudiantes.size(); i++) {
             if (listaEstudiantes.get(i).getCarnet() == carnetEstudiante) {
@@ -86,7 +88,7 @@ public class GestorEstudiantes {
         System.out.println("No se ha encontrado ningun estudiante con el carnet :" + carnetEstudiante);
     }
 
-
+    //Método de obtención de información y muestra
     public int obtenerTotalRegistros() {
         return listaEstudiantes.size();
     }

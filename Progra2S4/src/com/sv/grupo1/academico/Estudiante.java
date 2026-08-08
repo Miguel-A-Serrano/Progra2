@@ -6,16 +6,14 @@ public class Estudiante {
     private int edad;
     private String carrera;
 
-
     public Estudiante(int carnet, String nombre, int edad, String carrera) {
         this.carnet = carnet;
         this.nombre = nombre;
         this.edad = edad;
         this.carrera = carrera;
-
     }
 
-    //getter y setter de nombre
+    //Getter y Setter de nombre
     public String getNombre() {
         return nombre;
     }
@@ -23,7 +21,7 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    //getter y setter de edad
+    //Getter y Setter de edad
     public int getEdad() {
         return edad;
     }
@@ -31,7 +29,7 @@ public class Estudiante {
         this.edad = edad;
     }
 
-    //getter y setter de carrera
+    //Getter y Setter de carrera
     public String getCarrera() {
         return carrera;
     }
@@ -39,7 +37,7 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
-    //getter y setter de carnet
+    //Getter y Setter de carnet
     public int getCarnet() {
         return carnet;
     }
@@ -47,8 +45,9 @@ public class Estudiante {
         this.carnet = carnet;
     }
 
+    //Método para convertir el objeto a texto   
     @Override
     public String toString(){
-        return "\nnombre: " + nombre +"\nEdad: " +edad + "\nCarrera: " + carrera +"\nCarnet: " + carnet;
+        return "\nNombre: " + nombre +"\nEdad: " +edad + "\nCarrera: " + carrera +"\nCarnet: " + carnet;
     }
 }

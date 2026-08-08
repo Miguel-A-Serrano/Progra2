@@ -15,7 +15,8 @@ public class Main {
     public static final int CANCELAR = 4;
 
     public static void main(String[] args) {
-
+        
+        //Menú
         GestorEstudiantes listaEstudiantes = new GestorEstudiantes();
         listaEstudiantes.cargarDatosIniciales();
         while (true) {
@@ -40,7 +41,7 @@ public class Main {
                     listaEstudiantes.mostrarRegistros();
                 }
                 case BUSCAR_POR_CARNET -> {
-                    int carnetEstudiante = ScannerUtils.capturarNumero("Ingrese el carnet del registro que desea: ");
+                    int carnetEstudiante = ScannerUtils.capturarNumero("Ingrese el carnet del registro que desea");
                     listaEstudiantes.buscarPorCarnet(carnetEstudiante);
                 }
                 case AGREGAR -> {
@@ -49,7 +50,7 @@ public class Main {
                     if (listaEstudiantes.existeEstudiante(carnetEstudiante)){
                         System.out.println("\nError. Ya existe un registro con este numero de carnet: " + carnetEstudiante);
                     }else {
-                        String nombre = ScannerUtils.capturarTexto("Ingrese el nombre del estudiante ");
+                        String nombre = ScannerUtils.capturarTexto("Ingrese el nombre del estudiante");
                         int edad = ScannerUtils.capturarNumero("Ingrese la edad del estudiante");
                         String carrera = ScannerUtils.capturarTexto("Ingrese la carrera del estudiante");
 
@@ -61,7 +62,6 @@ public class Main {
                     }
 
                 }
-
                 case MODIFICAR_REGISTRO -> {
                     int carnetEstudiante = ScannerUtils.capturarNumero("Ingrese el numero de carnet del registro que desea modificar");
 
@@ -106,7 +106,6 @@ public class Main {
                                     System.out.println("\nRegresando al menu principal");
                                     modificando = false;
                                 }
-
                                 default -> {
                                     System.out.println("\nOpcion no valida. Intente de nuevo");
                                 }
@@ -115,18 +114,15 @@ public class Main {
                         }else {
                             System.out.println("Error. No se ha encontrado a ningun estudiante con el carnet: " + carnetEstudiante);
                         }
-
                 }
-
                 case SALIR -> {
+                    System.out.println("Gracias por utilizar nuestra plataforma.");
                     System.exit(0);
                 }
                 default -> {
                     System.out.println("Opción no válida. Por favor, seleccione un número del 1 al 6.");
                 }
             }
-
-
         }
     }
 }
